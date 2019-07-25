@@ -4,16 +4,16 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "transactions")
+@Entity(tableName = "Transaction_Table")
 public class Transaction {
     @PrimaryKey(autoGenerate = true)
-    private int uid;
+    int uid;
 
     @ColumnInfo(name = "date")
-    private String date;
+    String date;
 
     @ColumnInfo(name = "amount")
-    private double amount;
+    double amount;
 
 
     public int getUid() {

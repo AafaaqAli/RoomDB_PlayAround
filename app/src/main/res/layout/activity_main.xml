@@ -6,20 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textViewCounter"
+        android:textSize="25dp"
+        android:text="12"
+        android:layout_above="@id/layoutButtons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textViewUID"
-            android:layout_centerInParent="true"
             android:layout_width="235dp"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_marginRight="6dp"
             android:layout_toLeftOf="@+id/textViewLayout"
             android:text="12345"
             android:textColor="@android:color/black"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <RelativeLayout
@@ -35,7 +45,7 @@
                 android:text="Amount"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -47,36 +57,38 @@
                 android:text="Date"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
         </RelativeLayout>
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
         <EditText
-            android:inputType="numberDecimal"
-            android:layout_margin="10dp"
-            android:hint="Amount"
             android:id="@+id/editTextInputAmount"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Amount"
+            android:inputType="numberDecimal" />
+
         <Button
             android:id="@+id/buttonAdd"
-            android:text="Add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextInputAmount"
             android:layout_margin="10dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/editTextInputAmount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="Add" />
 
     </RelativeLayout>
 
 
-
     <RelativeLayout
+        android:id="@+id/layoutButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
